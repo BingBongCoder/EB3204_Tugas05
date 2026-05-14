@@ -60,7 +60,7 @@ apple_art = """
 """
 print(apple_art)
 
-print("Klasifikasi Buah Matang, Mentah, atau Busuk")
+print("Klasifikasi Kematangan Buah")
 print("EB3204 Pembelajaran Mesin dalam Teknik Biomedis")
 print("Tugas 5")
 print("Dibuat oleh Michael Liebing / 18323016")
@@ -123,7 +123,7 @@ while True:
     cv2.putText(frame, f"{label_name} ({conf:.1f}%)", (x1 + 5, y1 - 10), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 
-    cv2.imshow("Klasifikasi Buah Matang, Mentah, dan Busuk", frame)
+    cv2.imshow("Klasifikasi Kematangan Buah", frame)
 
     if cv2.waitKey(1) & 0xFF == 27: # Tekan ESC untuk keluar
         break
