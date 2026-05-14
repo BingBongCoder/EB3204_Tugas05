@@ -118,7 +118,7 @@ while True:
     # Gambar Kotak Deteksi Utama
     cv2.rectangle(frame, (x1, y1), (x2, y2), color, 3)
     
-    # Gambar Header Label (Nama Kematangan di Atas Kotak)
+    # Gambar Header Label 
     cv2.rectangle(frame, (x1, y1 - 40), (x2, y1), (40, 40, 40), -1)
     cv2.rectangle(frame, (x1, y1 - 5), (x2, y1), color, -1)
     label_size = cv2.getTextSize(label_name, font, 0.8, 2)[0]
@@ -127,8 +127,11 @@ while True:
 
     # Gambar Teks Akurasi
     acc_text = f"Akurasi: {conf:.1f}%"
-    cv2.rectangle(frame, (x1 + 5, y1 + 5), (x1 + 160, y1 + 35), (0, 0, 0), -1)
-    cv2.putText(frame, acc_text, (x1 + 10, y1 + 25), font, 0.5, (255, 255, 255), 1)
+    cv2.rectangle(frame, (x1, y2), (x2, y2 + 30), (40, 40, 40), -1)
+    cv2.rectangle(frame, (x1, y2), (x2, y2 + 5), color, -1)
+    acc_size = cv2.getTextSize(acc_text, font, 0.5, 1)[0]
+    acc_x = x1 + (size - acc_size[0]) // 2
+    cv2.putText(frame, acc_text, (acc_x, y2 + 22), font, 0.5, (255, 255, 255), 1)
 
     cv2.imshow("Klasifikasi Kematangan Buah", frame)
 
