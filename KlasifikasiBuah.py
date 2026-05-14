@@ -77,7 +77,7 @@ while True:
 
     h_f, w_f, _ = frame.shape
 
-    # Teks Instruksi di Atas Tengah
+    # Teks Instruksi
     instr_text = "Letakkan Buah di dalam Kotak Deteksi!"
     font = cv2.FONT_HERSHEY_SIMPLEX
     t_size = cv2.getTextSize(instr_text, font, 0.6, 2)[0]
