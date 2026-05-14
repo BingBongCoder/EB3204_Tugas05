@@ -120,7 +120,7 @@ while True:
     
     # Header Label
     cv2.rectangle(frame, (x1, y1-40), (x2, y1), color, -1) 
-    cv2.putText(frame, f"{label_name} ({conf:.1f}%)", (x1 + 5, y1 - 10), 
+    cv2.putText(frame, f"{label_name} (Akurasi: {conf:.1f}%)", (x1 + 5, y1 - 10), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 
     cv2.imshow("Klasifikasi Kematangan Buah", frame)
